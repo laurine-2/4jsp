@@ -1,0 +1,21 @@
+@startuml
+
+hide circle
+
+entity "Agency" as a {
+    * id
+    --
+    * city: varchar
+}
+
+entity "RealEstate" as re {
+    * id
+    --
+    * price: number
+    * purpose: varchar (sell | rent)
+    * bedroomNumber: number
+    * description: varchar
+}
+
+a||--o{re
+@enduml
